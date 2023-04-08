@@ -1,4 +1,6 @@
+import 'package:calculator_app/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:calculator_app/view/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,45 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-      ),
-      body: Column(
-        children: const [
-          SizedBox(
-            child: Text(''),
-          ),
-          CalculatorButtons()
-        ],
-      ),
-    );
-  }
-}
-
-class CalculatorButtons extends StatelessWidget {
-  const CalculatorButtons({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+      home: MyHomePage(),
     );
   }
 }
