@@ -1,4 +1,3 @@
-import 'package:calculator_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator_app/view/screens/home.dart';
 

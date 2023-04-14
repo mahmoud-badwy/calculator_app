@@ -2,37 +2,27 @@ import 'package:calculator_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class ButtonElement extends StatelessWidget {
-  bool? isMargin;
-  final double width;
-  final double height;
-  final String child;
-  ButtonElement(
-      {super.key,
-      this.isMargin,
-      required this.width,
-      required this.height,
-      required this.child});
+  final Widget child;
+  final int c;
+  double? width;
+
+  ButtonElement({super.key, required this.child, required this.c, this.width});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: (MediaQuery.of(context).size.width / 5.5) * width,
-      height: (MediaQuery.of(context).size.width / 5.5) * height,
-      padding: const EdgeInsets.all(8),
-      margin:
-          isMargin != true ? const EdgeInsets.all(8) : const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: MyColors.mainButtonColor,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Center(
-        child: Text(
-          child,
-          style: const TextStyle(
-              color: MyColors.textColor,
-              fontWeight: FontWeight.w600,
-              fontSize: 19),
+    return Center(
+      child: Container(
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 28),
+        alignment: Alignment.center,
+        height: MediaQuery.of(context).size.width / 5,
+        width: width != null
+            ? MediaQuery.of(context).size.width / 5 * width!
+            : MediaQuery.of(context).size.width / 5,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(80),
+          color: c == 1 ? MyColors.mainButtonColor : MyColors.plusButtonColor,
         ),
+        child: child,
       ),
     );
   }

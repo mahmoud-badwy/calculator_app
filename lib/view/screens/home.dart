@@ -16,16 +16,21 @@ class MyHomePage extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all((MediaQuery.of(context).size.width / 5) / 5),
         child: Column(
-          children: const [
+          children: [
             Expanded(
-              child: SizedBox(
-                child: Text('Mahmoud badwy'),
+              child: Container(
+                alignment: Alignment.bottomRight,
+                child: const Text(
+                  '0',
+                  style: TextStyle(
+                    color: MyColors.textColor,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 60,
+                  ),
+                ),
               ),
             ),
-            Expanded(
-              flex: 4,
-              child: CalculatorButtons(),
-            )
+            const CalculatorButtons()
           ],
         ),
       ),
