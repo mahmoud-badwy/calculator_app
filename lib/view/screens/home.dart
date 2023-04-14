@@ -22,8 +22,8 @@ class MyHomePage extends StatelessWidget {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomRight,
-                child: Selector<Calculats, double>(
-                  selector: (p0, p1) => p1.sum,
+                child: Selector<Calculats, String>(
+                  selector: (p0, p1) => p1.sumStr,
                   builder: (context, value, child) {
                     return Text(
                       value.toString(),

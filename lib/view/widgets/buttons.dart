@@ -16,6 +16,7 @@ class CalculatorButtons extends StatelessWidget {
           children: [
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 'AC',
                 style: TextStyle(
@@ -27,6 +28,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 'del',
                 style: TextStyle(
@@ -38,6 +40,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '%',
                 style: TextStyle(
@@ -49,6 +52,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 2,
+              n: 1,
               child: const Text(
                 '/',
                 style: TextStyle(
@@ -66,6 +70,7 @@ class CalculatorButtons extends StatelessWidget {
           children: [
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '7',
                 style: TextStyle(
@@ -77,6 +82,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '8',
                 style: TextStyle(
@@ -88,6 +94,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '9',
                 style: TextStyle(
@@ -99,6 +106,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 2,
+              n: 1,
               child: const Text(
                 'X',
                 style: TextStyle(
@@ -116,6 +124,7 @@ class CalculatorButtons extends StatelessWidget {
           children: [
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '4',
                 style: TextStyle(
@@ -127,6 +136,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '5',
                 style: TextStyle(
@@ -138,6 +148,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '6',
                 style: TextStyle(
@@ -149,6 +160,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 2,
+              n: 1,
               child: const Text(
                 '-',
                 style: TextStyle(
@@ -166,6 +178,7 @@ class CalculatorButtons extends StatelessWidget {
           children: [
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '1',
                 style: TextStyle(
@@ -177,6 +190,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '2',
                 style: TextStyle(
@@ -188,6 +202,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '3',
                 style: TextStyle(
@@ -199,6 +214,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 2,
+              n: 1,
               child: const Text(
                 '+',
                 style: TextStyle(
@@ -217,6 +233,7 @@ class CalculatorButtons extends StatelessWidget {
             ButtonElement(
               width: 2,
               c: 1,
+              n: 1,
               child: const Text(
                 '0',
                 style: TextStyle(
@@ -228,6 +245,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 1,
+              n: 1,
               child: const Text(
                 '.',
                 style: TextStyle(
@@ -239,6 +257,7 @@ class CalculatorButtons extends StatelessWidget {
             ),
             ButtonElement(
               c: 2,
+              n: 1,
               child: const Text(
                 '=',
                 style: TextStyle(

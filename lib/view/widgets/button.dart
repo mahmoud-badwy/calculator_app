@@ -1,12 +1,22 @@
 import 'package:calculator_app/constants/colors.dart';
+import 'package:calculator_app/controller/sums.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ButtonElement extends StatelessWidget {
   final Widget child;
+  final String child2;
   final int c;
+  final int n;
   double? width;
 
-  ButtonElement({super.key, required this.child, required this.c, this.width});
+  ButtonElement(
+      {super.key,
+      required this.child,
+      required this.c,
+      this.width,
+      required this.n,
+      required this.child2});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +37,11 @@ class ButtonElement extends StatelessWidget {
           borderRadius: BorderRadius.circular(80),
         ),
         padding: EdgeInsets.zero,
-        onPressed: () {},
+        onPressed: () {
+          if (c == 2) {}
+          Provider.of<Calculats>(context, listen: false).onPressed(n);
+          print(n);
+        },
         child: child,
       ),
     );
