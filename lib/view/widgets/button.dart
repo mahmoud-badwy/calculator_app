@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 class ButtonElement extends StatelessWidget {
   final Widget child;
-  final String child2;
+  String? child2;
   final int c;
   final int n;
   double? width;
@@ -16,7 +16,7 @@ class ButtonElement extends StatelessWidget {
       required this.c,
       this.width,
       required this.n,
-      required this.child2});
+      this.child2});
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +38,7 @@ class ButtonElement extends StatelessWidget {
         ),
         padding: EdgeInsets.zero,
         onPressed: () {
-          if (c == 2) {}
-          Provider.of<Calculats>(context, listen: false).onPressed(n);
+          Provider.of<Calculats>(context, listen: false).onPressed(n, c);
           print(n);
         },
         child: child,

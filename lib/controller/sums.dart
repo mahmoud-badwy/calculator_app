@@ -5,11 +5,29 @@ class Calculats with ChangeNotifier {
   String calc = '+';
   double result = 0;
   bool isSums = false;
-  void onPressed(int n) {
-    if (sumStr.startsWith('0')) {
-      sumStr = '$n';
+  void onPressed(int n, int c) {
+    if (sumStr.endsWith('+') ||
+        sumStr.endsWith('/') ||
+        sumStr.endsWith('x') ||
+        sumStr.endsWith('-')) {
+      if (sumStr.startsWith('0')) {
+        sumStr = '$n';
+      } else {
+        if (c == 2) {
+        } else {
+          sumStr = '$sumStr$n';
+        }
+      }
     } else {
-      sumStr = '$sumStr$calc$n';
+      if (sumStr.startsWith('0')) {
+        sumStr = '$n';
+      } else {
+        if (c == 2) {
+          sumStr = '$sumStr$calc';
+        } else {
+          sumStr = '$sumStr$n';
+        }
+      }
     }
 
     notifyListeners();
