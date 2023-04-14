@@ -1,6 +1,8 @@
 import 'package:calculator_app/constants/colors.dart';
+import 'package:calculator_app/controller/sums.dart';
 import 'package:calculator_app/view/widgets/buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -20,13 +22,18 @@ class MyHomePage extends StatelessWidget {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomRight,
-                child: const Text(
-                  '0',
-                  style: TextStyle(
-                    color: MyColors.textColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 60,
-                  ),
+                child: Selector<Calculats, double>(
+                  selector: (p0, p1) => p1.sum,
+                  builder: (context, value, child) {
+                    return Text(
+                      value.toString(),
+                      style: const TextStyle(
+                        color: MyColors.textColor,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 60,
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
