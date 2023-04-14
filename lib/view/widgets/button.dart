@@ -10,18 +10,24 @@ class ButtonElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 28),
-        alignment: Alignment.center,
-        height: MediaQuery.of(context).size.width / 5,
-        width: width != null
-            ? MediaQuery.of(context).size.width / 5 * width!
-            : MediaQuery.of(context).size.width / 5,
-        decoration: BoxDecoration(
+    return Container(
+      margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 28),
+      alignment: Alignment.center,
+      height: MediaQuery.of(context).size.width / 5,
+      width: width != null
+          ? MediaQuery.of(context).size.width / 5 * width!
+          : MediaQuery.of(context).size.width / 5,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(80),
+        color: c == 1 ? MyColors.mainButtonColor : MyColors.plusButtonColor,
+      ),
+      child: MaterialButton(
+        height: double.infinity,
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(80),
-          color: c == 1 ? MyColors.mainButtonColor : MyColors.plusButtonColor,
         ),
+        padding: EdgeInsets.zero,
+        onPressed: () {},
         child: child,
       ),
     );
