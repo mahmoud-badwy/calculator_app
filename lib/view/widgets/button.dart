@@ -38,7 +38,8 @@ class ButtonElement extends StatelessWidget {
         ),
         padding: EdgeInsets.zero,
         onPressed: () {
-          Provider.of<Calculats>(context, listen: false).onPressed(n, c);
+          Provider.of<Calculats>(context, listen: false)
+              .onPressed(n: n, c: c, child2: child2!);
           print(n);
         },
         child: child,

@@ -5,7 +5,7 @@ class Calculats with ChangeNotifier {
   String calc = '+';
   double result = 0;
   bool isSums = false;
-  void onPressed(int n, int c) {
+  void onPressed({required int n, required int c, String? child2}) {
     if (sumStr.endsWith('+') ||
         sumStr.endsWith('/') ||
         sumStr.endsWith('x') ||
@@ -23,7 +23,7 @@ class Calculats with ChangeNotifier {
         sumStr = '$n';
       } else {
         if (c == 2) {
-          sumStr = '$sumStr$calc';
+          sumStr = '$sumStr$child2';
         } else {
           sumStr = '$sumStr$n';
         }
