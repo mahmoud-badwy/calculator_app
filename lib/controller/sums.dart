@@ -5,7 +5,7 @@ class Calculats with ChangeNotifier {
   String calc = '+';
   double result = 0;
   bool isSums = false;
-  void onPressed({required int n, required int c, String? child2}) {
+  void onPressed({required int n, required int c, required String child2}) {
     if (sumStr.endsWith('+') ||
         sumStr.endsWith('/') ||
         sumStr.endsWith('x') ||
