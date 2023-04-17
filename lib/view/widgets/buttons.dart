@@ -1,10 +1,8 @@
-import 'package:calculator_app/constants/colors.dart';
 import 'package:calculator_app/view/widgets/MainScreen/end.dart';
 import 'package:calculator_app/view/widgets/MainScreen/from_1_to_plus.dart';
 import 'package:calculator_app/view/widgets/MainScreen/from_4_to_.dart';
 import 'package:calculator_app/view/widgets/MainScreen/from_7_to_x.dart';
 import 'package:calculator_app/view/widgets/MainScreen/start.dart';
-import 'package:calculator_app/view/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorButtons extends StatelessWidget {
