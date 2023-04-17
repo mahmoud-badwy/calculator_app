@@ -1,3 +1,4 @@
+import 'package:calculator_app/controller/handle_color.dart';
 import 'package:calculator_app/controller/sums.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator_app/view/screens/home.dart';
@@ -13,14 +14,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Calculats(),
-      builder: (context, child) {
-        return const MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: MyHomePage(),
-        );
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => Calculats(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => HandleColor(),
+        ),
+      ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MyHomePage(),
+      ),
     );
   }
 }

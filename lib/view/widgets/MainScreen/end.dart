@@ -16,7 +16,7 @@ class EndWidgets extends StatelessWidget {
           id: '0',
           childInScreen: '0',
           numberInOprate: 0,
-          child: const Text(
+          child2: const Text(
             '0',
             style: TextStyle(
               color: MyColors.textColor,
@@ -29,7 +29,7 @@ class EndWidgets extends StatelessWidget {
           id: '.',
           childInScreen: '.',
           numberInOprate: 1,
-          child: const Text(
+          child2: const Text(
             '.',
             style: TextStyle(
               color: MyColors.textColor,
@@ -42,7 +42,7 @@ class EndWidgets extends StatelessWidget {
           id: '',
           numberInOprate: 1,
           childInScreen: '=',
-          child: const Text(
+          child2: const Text(
             '=',
             style: TextStyle(
               color: MyColors.textColor,

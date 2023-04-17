@@ -15,7 +15,7 @@ class StartWidget extends StatelessWidget {
           id: 'ac',
           childInScreen: 'AC',
           numberInOprate: 1,
-          child: const Text(
+          child2: const Text(
             'AC',
             style: TextStyle(
               color: MyColors.textColor,
@@ -28,7 +28,7 @@ class StartWidget extends StatelessWidget {
           childInScreen: 'del',
           id: 'del',
           numberInOprate: 1,
-          child: const Text(
+          child2: const Text(
             'del',
             style: TextStyle(
               color: MyColors.textColor,
@@ -41,7 +41,7 @@ class StartWidget extends StatelessWidget {
           childInScreen: '%',
           id: '%',
           numberInOprate: 1,
-          child: const Text(
+          child2: const Text(
             '%',
             style: TextStyle(
               color: MyColors.textColor,
@@ -54,7 +54,7 @@ class StartWidget extends StatelessWidget {
           id: '',
           numberInOprate: 1,
           childInScreen: '/',
-          child: const Text(
+          child2: const Text(
             '/',
             style: TextStyle(
               color: MyColors.textColor,

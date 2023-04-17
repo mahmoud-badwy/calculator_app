@@ -15,7 +15,7 @@ class From1toPlus extends StatelessWidget {
           id: '1',
           childInScreen: '1',
           numberInOprate: 1,
-          child: const Text(
+          child2: const Text(
             '1',
             style: TextStyle(
               color: MyColors.textColor,
@@ -28,7 +28,7 @@ class From1toPlus extends StatelessWidget {
           id: '1',
           childInScreen: '2',
           numberInOprate: 2,
-          child: const Text(
+          child2: const Text(
             '2',
             style: TextStyle(
               color: MyColors.textColor,
@@ -41,7 +41,7 @@ class From1toPlus extends StatelessWidget {
           id: '1',
           childInScreen: '3',
           numberInOprate: 3,
-          child: const Text(
+          child2: const Text(
             '3',
             style: TextStyle(
               color: MyColors.textColor,
@@ -54,7 +54,7 @@ class From1toPlus extends StatelessWidget {
           id: '',
           numberInOprate: 1,
           childInScreen: '+',
-          child: const Text(
+          child2: const Text(
             '+',
             style: TextStyle(
               color: MyColors.textColor,

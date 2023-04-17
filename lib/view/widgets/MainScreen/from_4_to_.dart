@@ -15,7 +15,7 @@ class From4toMinise extends StatelessWidget {
           id: '1',
           childInScreen: '4',
           numberInOprate: 4,
-          child: const Text(
+          child2: const Text(
             '4',
             style: TextStyle(
               color: MyColors.textColor,
@@ -28,7 +28,7 @@ class From4toMinise extends StatelessWidget {
           id: '1',
           childInScreen: '5',
           numberInOprate: 5,
-          child: const Text(
+          child2: const Text(
             '5',
             style: TextStyle(
               color: MyColors.textColor,
@@ -41,7 +41,7 @@ class From4toMinise extends StatelessWidget {
           id: '1',
           childInScreen: '6',
           numberInOprate: 6,
-          child: const Text(
+          child2: const Text(
             '6',
             style: TextStyle(
               color: MyColors.textColor,
@@ -54,7 +54,7 @@ class From4toMinise extends StatelessWidget {
           id: '',
           numberInOprate: 1,
           childInScreen: '-',
-          child: const Text(
+          child2: const Text(
             '-',
             style: TextStyle(
               color: MyColors.textColor,

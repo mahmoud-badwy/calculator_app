@@ -15,7 +15,7 @@ class From7toX extends StatelessWidget {
           id: '1',
           childInScreen: '7',
           numberInOprate: 7,
-          child: const Text(
+          child2: const Text(
             '7',
             style: TextStyle(
               color: MyColors.textColor,
@@ -28,7 +28,7 @@ class From7toX extends StatelessWidget {
           id: '1',
           childInScreen: '8',
           numberInOprate: 8,
-          child: const Text(
+          child2: const Text(
             '8',
             style: TextStyle(
               color: MyColors.textColor,
@@ -41,7 +41,7 @@ class From7toX extends StatelessWidget {
           id: '1',
           childInScreen: '9',
           numberInOprate: 9,
-          child: const Text(
+          child2: const Text(
             '9',
             style: TextStyle(
               color: MyColors.textColor,
@@ -54,7 +54,7 @@ class From7toX extends StatelessWidget {
           id: '',
           numberInOprate: 1,
           childInScreen: 'x',
-          child: const Text(
+          child2: const Text(
             'X',
             style: TextStyle(
               color: MyColors.textColor,
