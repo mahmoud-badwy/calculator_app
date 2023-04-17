@@ -6,14 +6,14 @@ import 'package:provider/provider.dart';
 class ButtonElement extends StatelessWidget {
   final Widget child;
   final String childInScreen;
-  final int numberInScreen;
+  final double id;
   final int numberInOprate;
   double? width;
 
   ButtonElement({
     super.key,
     required this.child,
-    required this.numberInScreen,
+    required this.id,
     this.width,
     required this.numberInOprate,
     required this.childInScreen,
@@ -30,7 +30,7 @@ class ButtonElement extends StatelessWidget {
           : MediaQuery.of(context).size.width / 5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(80),
-        color: numberInScreen == 1 || numberInScreen == 3
+        color: id == 1 || id == 3
             ? MyColors.mainButtonColor
             : MyColors.plusButtonColor,
       ),
@@ -42,8 +42,8 @@ class ButtonElement extends StatelessWidget {
         padding: EdgeInsets.zero,
         onPressed: () {
           Provider.of<Calculats>(context, listen: false).onPressed(
-              vnumberInOprate: numberInOprate,
-              numberInScreen: numberInScreen,
+              numberInOprate: numberInOprate,
+              id: id,
               childInScreen: childInScreen);
         },
         child: child,

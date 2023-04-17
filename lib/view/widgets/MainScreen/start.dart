@@ -12,7 +12,7 @@ class StartWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         ButtonElement(
-          numberInScreen: 3,
+          id: 1.1,
           childInScreen: 'AC',
           numberInOprate: 1,
           child: const Text(
@@ -26,7 +26,7 @@ class StartWidget extends StatelessWidget {
         ),
         ButtonElement(
           childInScreen: 'del',
-          numberInScreen: 1,
+          id: 1.2,
           numberInOprate: 1,
           child: const Text(
             'del',
@@ -39,7 +39,7 @@ class StartWidget extends StatelessWidget {
         ),
         ButtonElement(
           childInScreen: '%',
-          numberInScreen: 1,
+          id: 2.1,
           numberInOprate: 1,
           child: const Text(
             '%',
@@ -51,7 +51,7 @@ class StartWidget extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          numberInScreen: 2,
+          id: 2,
           numberInOprate: 1,
           childInScreen: '/',
           child: const Text(
