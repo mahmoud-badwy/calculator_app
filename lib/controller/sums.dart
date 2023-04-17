@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_expressions/math_expressions.dart';
 
 class Calculats with ChangeNotifier {
   String sumStr = 0.toString();
@@ -6,7 +7,7 @@ class Calculats with ChangeNotifier {
   bool isSums = false;
   void acMethod() {
     sumStr = 0.toString();
-    result = 0;
+    result = 0.toString();
     notifyListeners();
   }
 
@@ -23,16 +24,18 @@ class Calculats with ChangeNotifier {
     notifyListeners();
   }
 
-  void equalPressed() {
-    String finaluserinput = sumStr;
-    finaluserinput = sumStr.replaceAll('x', '*');
-
-    Parser p = Parser();
-    Expression exp = p.parse(finaluserinput);
-    ContextModel cm = ContextModel();
-    double eval = exp.evaluate(EvaluationType.REAL, cm);
-    result = eval.toString();
-  }
+  // void equalPressed() {
+  //   String finaluserinput = '5599x2';
+  //   finaluserinput = sumStr.replaceAll('x', '*');
+  //   Parser p = Parser();
+  //   Expression exp = p.parse(finaluserinput);
+  //   ContextModel cm = ContextModel();
+  //   double eval = exp.evaluate(EvaluationType.REAL, cm);
+  //   result = eval.toString();
+  //   print(result);
+  //   sumStr = result;
+  //   notifyListeners();
+  // }
 
   void onPressed({
     required int numberInOprate,
@@ -71,6 +74,9 @@ class Calculats with ChangeNotifier {
     } else /*this check is AC */
     if (id == 'del') {
       deleteNumber();
+    } else /*this check is equal */
+    if (id == '= =') {
+      // equalPressed();
     }
 
     notifyListeners();
