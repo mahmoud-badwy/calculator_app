@@ -3,11 +3,9 @@ import 'package:math_expressions/math_expressions.dart';
 
 class Calculats with ChangeNotifier {
   String sumStr = 0.toString();
-  String result = 0.toString();
   bool isSums = false;
   void acMethod() {
     sumStr = 0.toString();
-    result = 0.toString();
     notifyListeners();
   }
 
@@ -24,18 +22,18 @@ class Calculats with ChangeNotifier {
     notifyListeners();
   }
 
-  // void equalPressed() {
-  //   String finaluserinput = '5599x2';
-  //   finaluserinput = sumStr.replaceAll('x', '*');
-  //   Parser p = Parser();
-  //   Expression exp = p.parse(finaluserinput);
-  //   ContextModel cm = ContextModel();
-  //   double eval = exp.evaluate(EvaluationType.REAL, cm);
-  //   result = eval.toString();
-  //   print(result);
-  //   sumStr = result;
-  //   notifyListeners();
-  // }
+  void equalPressed() {
+    String finaluserinput = sumStr;
+    finaluserinput = sumStr.replaceAll('x', '*');
+
+    Parser p = Parser();
+    Expression exp = p.parse(finaluserinput);
+    ContextModel cm = ContextModel();
+    double eval = exp.evaluate(EvaluationType.REAL, cm);
+    sumStr = eval.toString();
+
+    notifyListeners();
+  }
 
   void onPressed({
     required int numberInOprate,
@@ -76,7 +74,7 @@ class Calculats with ChangeNotifier {
       deleteNumber();
     } else /*this check is equal */
     if (id == '= =') {
-      // equalPressed();
+      equalPressed();
     }
 
     notifyListeners();
