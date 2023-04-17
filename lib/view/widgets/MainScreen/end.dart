@@ -39,9 +39,9 @@ class EndWidgets extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          id: '=',
+          id: '= =',
           numberInOprate: 1,
-          childInScreen: '= =',
+          childInScreen: '=',
           child2: const Text(
             '=',
             style: TextStyle(
