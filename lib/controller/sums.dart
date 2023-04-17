@@ -11,7 +11,15 @@ class Calculats with ChangeNotifier {
   }
 
   void deleteNumber() {
-    sumStr = sumStr.trimRight();
+    if (sumStr != '0') {
+      sumStr = sumStr.substring(0, sumStr.length - 1);
+      if (sumStr.isEmpty) {
+        sumStr = 0.toString();
+      }
+    } else {
+      sumStr = 0.toString();
+    }
+
     notifyListeners();
   }
 
@@ -47,7 +55,12 @@ class Calculats with ChangeNotifier {
         sumStr = '$sumStr$numberInOprate';
       }
     } else /*this check is AC */
-    if (id == 'ac') {}
+    if (id == 'ac') {
+      acMethod();
+    } else /*this check is AC */
+    if (id == 'del') {
+      deleteNumber();
+    }
 
     notifyListeners();
   }
