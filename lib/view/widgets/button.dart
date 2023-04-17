@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 class ButtonElement extends StatelessWidget {
   final Widget child;
   final String childInScreen;
-  final double id;
+  final String id;
   final int numberInOprate;
   double? width;
 

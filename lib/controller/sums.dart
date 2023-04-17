@@ -2,24 +2,34 @@ import 'package:flutter/material.dart';
 
 class Calculats with ChangeNotifier {
   String sumStr = 0.toString();
-  String calc = '+';
   double result = 0;
   bool isSums = false;
+  void acMethod() {
+    sumStr = 0.toString();
+    result = 0;
+    notifyListeners();
+  }
+
+  void deleteNumber() {
+    sumStr = sumStr.trimRight();
+    notifyListeners();
+  }
+
   void onPressed({
     required int numberInOprate,
-    required double id,
+    required String id,
     required String childInScreen,
   }) {
     //check if end number is operate or not
     //this check zero number
-    if (id == 0) {
+    if (id == '0') {
       if (sumStr.startsWith('0') && sumStr.length == 1) {
         sumStr = '$numberInOprate';
       } else {
         sumStr = '$sumStr$numberInOprate';
       }
     } else /*this check piont operate*/
-    if (id == 0.1) {
+    if (id == '.') {
       if (sumStr.endsWith('+') ||
           sumStr.endsWith('/') ||
           sumStr.endsWith('x') ||
@@ -30,19 +40,15 @@ class Calculats with ChangeNotifier {
         sumStr = '$sumStr.';
       }
     } else /*this check all numbers from 1 to 9*/
-    if (id == 1) {
+    if (id == '1') {
       if (sumStr.startsWith('0') && sumStr.length == 1) {
         sumStr = '$numberInOprate';
       } else {
         sumStr = '$sumStr$numberInOprate';
       }
-    }
+    } else /*this check is AC */
+    if (id == 'ac') {}
 
-    notifyListeners();
-  }
-
-  void deleteNumber() {
-    sumStr = sumStr.trimRight();
     notifyListeners();
   }
 }
