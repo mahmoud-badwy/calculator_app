@@ -75,7 +75,18 @@ class Calculats with ChangeNotifier {
     } else /*this check is equal */
     if (id == '= =') {
       equalPressed();
-    }
+    } else /*this check is plus */
+    if (id.contains('  ')) {
+      if (sumStr.endsWith('+') ||
+          sumStr.endsWith('/') ||
+          sumStr.endsWith('x') ||
+          sumStr.endsWith('%') ||
+          sumStr.endsWith('-')) {
+      } else {
+        sumStr = '$sumStr$childInScreen';
+      }
+    } else /*this check is % */
+    if (id == '% %') {}
 
     notifyListeners();
   }

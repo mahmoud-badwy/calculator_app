@@ -51,7 +51,7 @@ class From4toMinise extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          id: '',
+          id: '-  -',
           numberInOprate: 1,
           childInScreen: '-',
           child2: const Text(

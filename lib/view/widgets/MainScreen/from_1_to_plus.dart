@@ -51,7 +51,7 @@ class From1toPlus extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          id: '',
+          id: '+  +',
           numberInOprate: 1,
           childInScreen: '+',
           child2: const Text(
