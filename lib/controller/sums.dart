@@ -9,13 +9,23 @@ class Calculats with ChangeNotifier {
     if (sumStr.endsWith('+') ||
         sumStr.endsWith('/') ||
         sumStr.endsWith('x') ||
-        sumStr.endsWith('-')) {
+        sumStr.endsWith('-') ||
+        sumStr.endsWith('=')) {
       if (sumStr.startsWith('0')) {
         sumStr = '$n';
       } else {
         if (c == 2) {
+          print(' c == 2');
         } else {
-          sumStr = '$sumStr$n';
+          if (c == 3) {
+            sumStr = '0';
+            calc = '';
+            result = 0;
+            isSums = false;
+          } else {
+            print('onther c == 3');
+            sumStr = '$sumStr$c';
+          }
         }
       }
     } else {
@@ -30,6 +40,11 @@ class Calculats with ChangeNotifier {
       }
     }
 
+    notifyListeners();
+  }
+
+  void deleteNumber() {
+    sumStr = sumStr.trimRight();
     notifyListeners();
   }
 }

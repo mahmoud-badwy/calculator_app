@@ -29,7 +29,9 @@ class ButtonElement extends StatelessWidget {
           : MediaQuery.of(context).size.width / 5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(80),
-        color: c == 1 ? MyColors.mainButtonColor : MyColors.plusButtonColor,
+        color: c == 1 || c == 3
+            ? MyColors.mainButtonColor
+            : MyColors.plusButtonColor,
       ),
       child: MaterialButton(
         height: double.infinity,

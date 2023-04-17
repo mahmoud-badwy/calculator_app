@@ -15,7 +15,7 @@ class CalculatorButtons extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             ButtonElement(
-              c: 1,
+              c: 3,
               child2: 'AC',
               n: 1,
               child: const Text(
