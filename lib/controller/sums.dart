@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Calculats with ChangeNotifier {
   String sumStr = 0.toString();
-  double result = 0;
+  String result = 0.toString();
   bool isSums = false;
   void acMethod() {
     sumStr = 0.toString();
@@ -21,6 +21,17 @@ class Calculats with ChangeNotifier {
     }
 
     notifyListeners();
+  }
+
+  void equalPressed() {
+    String finaluserinput = sumStr;
+    finaluserinput = sumStr.replaceAll('x', '*');
+
+    Parser p = Parser();
+    Expression exp = p.parse(finaluserinput);
+    ContextModel cm = ContextModel();
+    double eval = exp.evaluate(EvaluationType.REAL, cm);
+    result = eval.toString();
   }
 
   void onPressed({
