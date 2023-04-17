@@ -13,9 +13,9 @@ class EndWidgets extends StatelessWidget {
       children: [
         ButtonElement(
           width: 2,
-          c: 1,
-          child2: '0',
-          n: 0,
+          numberInScreen: 1,
+          childInScreen: '0',
+          numberInOprate: 0,
           child: const Text(
             '0',
             style: TextStyle(
@@ -26,9 +26,9 @@ class EndWidgets extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 1,
-          child2: '.',
-          n: 1,
+          numberInScreen: 1,
+          childInScreen: '.',
+          numberInOprate: 1,
           child: const Text(
             '.',
             style: TextStyle(
@@ -39,9 +39,9 @@ class EndWidgets extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 2,
-          n: 1,
-          child2: '=',
+          numberInScreen: 2,
+          numberInOprate: 1,
+          childInScreen: '=',
           child: const Text(
             '=',
             style: TextStyle(

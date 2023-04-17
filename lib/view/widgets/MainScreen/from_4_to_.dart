@@ -12,9 +12,9 @@ class From4toMinise extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         ButtonElement(
-          c: 1,
-          child2: '4',
-          n: 4,
+          numberInScreen: 1,
+          childInScreen: '4',
+          numberInOprate: 4,
           child: const Text(
             '4',
             style: TextStyle(
@@ -25,9 +25,9 @@ class From4toMinise extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 1,
-          child2: '5',
-          n: 5,
+          numberInScreen: 1,
+          childInScreen: '5',
+          numberInOprate: 5,
           child: const Text(
             '5',
             style: TextStyle(
@@ -38,9 +38,9 @@ class From4toMinise extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 1,
-          child2: '6',
-          n: 6,
+          numberInScreen: 1,
+          childInScreen: '6',
+          numberInOprate: 6,
           child: const Text(
             '6',
             style: TextStyle(
@@ -51,9 +51,9 @@ class From4toMinise extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 2,
-          n: 1,
-          child2: '-',
+          numberInScreen: 2,
+          numberInOprate: 1,
+          childInScreen: '-',
           child: const Text(
             '-',
             style: TextStyle(

@@ -5,18 +5,19 @@ import 'package:provider/provider.dart';
 
 class ButtonElement extends StatelessWidget {
   final Widget child;
-  final String child2;
-  final int c;
-  final int n;
+  final String childInScreen;
+  final int numberInScreen;
+  final int numberInOprate;
   double? width;
 
-  ButtonElement(
-      {super.key,
-      required this.child,
-      required this.c,
-      this.width,
-      required this.n,
-      required this.child2});
+  ButtonElement({
+    super.key,
+    required this.child,
+    required this.numberInScreen,
+    this.width,
+    required this.numberInOprate,
+    required this.childInScreen,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class ButtonElement extends StatelessWidget {
           : MediaQuery.of(context).size.width / 5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(80),
-        color: c == 1 || c == 3
+        color: numberInScreen == 1 || numberInScreen == 3
             ? MyColors.mainButtonColor
             : MyColors.plusButtonColor,
       ),
@@ -40,9 +41,10 @@ class ButtonElement extends StatelessWidget {
         ),
         padding: EdgeInsets.zero,
         onPressed: () {
-          Provider.of<Calculats>(context, listen: false)
-              .onPressed(n: n, c: c, child2: child2);
-          print(n);
+          Provider.of<Calculats>(context, listen: false).onPressed(
+              vnumberInOprate: numberInOprate,
+              numberInScreen: numberInScreen,
+              childInScreen: childInScreen);
         },
         child: child,
       ),

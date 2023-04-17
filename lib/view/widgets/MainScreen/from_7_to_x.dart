@@ -12,9 +12,9 @@ class From7toX extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         ButtonElement(
-          c: 1,
-          child2: '7',
-          n: 7,
+          numberInScreen: 1,
+          childInScreen: '7',
+          numberInOprate: 7,
           child: const Text(
             '7',
             style: TextStyle(
@@ -25,9 +25,9 @@ class From7toX extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 1,
-          child2: '8',
-          n: 8,
+          numberInScreen: 1,
+          childInScreen: '8',
+          numberInOprate: 8,
           child: const Text(
             '8',
             style: TextStyle(
@@ -38,9 +38,9 @@ class From7toX extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 1,
-          child2: '9',
-          n: 9,
+          numberInScreen: 1,
+          childInScreen: '9',
+          numberInOprate: 9,
           child: const Text(
             '9',
             style: TextStyle(
@@ -51,9 +51,9 @@ class From7toX extends StatelessWidget {
           ),
         ),
         ButtonElement(
-          c: 2,
-          n: 1,
-          child2: 'x',
+          numberInScreen: 2,
+          numberInOprate: 1,
+          childInScreen: 'x',
           child: const Text(
             'X',
             style: TextStyle(
