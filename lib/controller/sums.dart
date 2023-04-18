@@ -58,6 +58,8 @@ class Calculats with ChangeNotifier {
           sumStr.endsWith('%') ||
           sumStr.endsWith('-')) {
         sumStr = '0.';
+      } else if (sumStr.endsWith('.')) {
+        sumStr = sumStr;
       } else {
         sumStr = '$sumStr.';
       }
