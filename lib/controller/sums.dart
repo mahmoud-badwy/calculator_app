@@ -25,14 +25,17 @@ class Calculats with ChangeNotifier {
   void equalPressed() {
     String finaluserinput = sumStr;
     finaluserinput = sumStr.replaceAll('x', '*');
-
-    Parser p = Parser();
-    Expression exp = p.parse(finaluserinput);
-    ContextModel cm = ContextModel();
-    double eval = exp.evaluate(EvaluationType.REAL, cm);
-    sumStr = eval.toString();
-    if (sumStr.endsWith('.0')) {
-      sumStr = sumStr.replaceAll('.0', '');
+    try {
+      Parser p = Parser();
+      Expression exp = p.parse(finaluserinput);
+      ContextModel cm = ContextModel();
+      double eval = exp.evaluate(EvaluationType.REAL, cm);
+      sumStr = eval.toString();
+      if (sumStr.endsWith('.0')) {
+        sumStr = sumStr.replaceAll('.0', '');
+      }
+    } catch (e) {
+      sumStr = e.toString();
     }
     notifyListeners();
   }
