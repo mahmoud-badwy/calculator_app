@@ -31,7 +31,9 @@ class Calculats with ChangeNotifier {
     ContextModel cm = ContextModel();
     double eval = exp.evaluate(EvaluationType.REAL, cm);
     sumStr = eval.toString();
-
+    if (sumStr.endsWith('.0')) {
+      sumStr = sumStr.replaceAll('.0', '');
+    }
     notifyListeners();
   }
 
