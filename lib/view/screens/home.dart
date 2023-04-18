@@ -25,12 +25,15 @@ class MyHomePage extends StatelessWidget {
                 child: Selector<Calculats, String>(
                   selector: (p0, p1) => p1.sumStr,
                   builder: (context, value, child) {
-                    return Text(
-                      value.toString(),
-                      style: const TextStyle(
-                        color: MyColors.textColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 60,
+                    return SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      child: Text(
+                        value.toString(),
+                        style: const TextStyle(
+                          color: MyColors.textColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 60,
+                        ),
                       ),
                     );
                   },
